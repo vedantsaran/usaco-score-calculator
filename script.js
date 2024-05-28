@@ -7,8 +7,8 @@ document.getElementById('scoreForm').addEventListener('submit', function (e) {
     let totalScore = 0;
 
     for (let i = 1; i <= numberOfProblems; i++) {
-        const totalCases = parseInt(document.getElementById(`cases${i}`).value);
         const correctCases = parseInt(document.getElementById(`correct${i}`).value);
+        const totalCases = parseInt(document.getElementById(`total${i}`).value);
 
         const scoreForProblem = (correctCases / totalCases) * MAX_SCORE_PER_PROBLEM;
         totalScore += scoreForProblem;
